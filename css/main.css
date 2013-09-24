@@ -1,0 +1,1153 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+/*----------------------------------------------------------------------------- 
+GENERAL SHARED
+-----------------------------------------------------------------------------*/
+body {
+    padding:0;
+    margin:0;
+    font-style:lighter;
+}
+
+#main {
+        background: #222;
+}
+
+.section {
+    padding:50px 0;
+    display:block;
+    position: relative;
+    border-top: 1px solid #ccc;
+    background-color:#f5f5f5;
+    z-index: 3;
+}
+
+.contentArea { 
+/*    text-align:center; */
+    width:90%; 
+    max-width:1000px; 
+    margin-bottom:40px; 
+    margin-left:auto; 
+    margin-right:auto; 
+}
+
+.contentArea a:hover {
+    color: #bf4a22;
+
+}
+
+/* buttons*/
+.button { 
+    text-align:center; 
+}
+
+.apply {
+    text-align:right;
+    margin-right:6px;
+}
+
+.button, .apply { 
+    position:relative; 
+    z-index:10; 
+    -webkit-transform:translateZ(0); 
+}
+
+.button a, .apply a {
+    position:relative; 
+    z-index:10;
+    text-align:center;
+    display:inline-block; 
+    cursor:pointer;
+    padding:0px 17px;
+    background:#222;
+    font-family: sans-serif; 
+    color:#efefef; text-transform:uppercase; 
+    letter-spacing:2px; 
+    font-size:16px;
+    -webkit-transition:all .2s;
+    -moz-transition:all .2s;
+    transition:all .2s;
+}
+
+.button a:active, .apply a:active {
+    background: #888;
+}
+
+.button a:hover, .apply a:hover {
+    background: #bf4a22;
+    color: #efefef;
+}
+
+
+
+/*----------------------------------------------------------------------------- 
+TYPOGRAPHY
+-----------------------------------------------------------------------------*/
+body { 
+
+    font-family:"brandon-grotesque" Georgia, serif; 
+    font-weight:300; 
+    font-style:normal; 
+    color:#888; 
+}
+
+
+h1 {
+    font-size:30px; 
+    line-height:140%; 
+    letter-spacing:2px; 
+    margin: 0;
+    text-align: center; 
+    color:#fff;
+    font-family: "runda", sans-serif;
+    font-weight:500; 
+    text-transform:uppercase;
+}
+
+h2 { 
+    color: #222; 
+    font-size:18px;
+    text-align: center; 
+    line-height:30px; 
+    letter-spacing:2px;
+    font-family: "runda", sans-serif;
+    font-weight:500; 
+    margin-bottom:10px; 
+    text-transform:uppercase; 
+}
+
+h3 { 
+    font-family: "brandon-grotesque", serif;
+    color: #888;
+    letter-spacing:2px;
+    font-weight: normal;
+}
+
+h4 {
+    font-family: "runda", arial, sans-serif;
+    color: #fff;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1em;  
+
+}
+
+h5 {
+    font-family: "runda", arial, sans-serif;
+    color: #222;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-align: left;
+    font-weight: 300;
+    font-size: .7em;  
+
+}
+
+p {
+    font-family: "brandon-grotesque", serif;
+    text-align: center;
+    letter-spacing:1px; 
+    font-size:1em;
+    font-weight:400; 
+    line-height:140%; 
+}
+
+a { 
+    color:#888; 
+    text-decoration:none; 
+}
+/*----------------------------------------------------------------------------- 
+NAVIGATION
+-----------------------------------------------------------------------------*/
+
+
+#nav {
+    width:100%;
+    font-family: "runda", sans-serif;
+    font-weight:400; 
+    text-transform:uppercase;
+    box-shadow:0 0 3px rgba(0,0,0,.7);
+}
+
+.desktop #nav {
+    top:0; 
+    left:0;
+    margin:0;
+    z-index: 100;
+}
+
+.desktop #nav.fixed {
+    position:fixed;
+}
+
+#nav ul { 
+    background:#fff; 
+    text-align:center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left:0;
+}
+
+#nav ul li { 
+    display:inline-block; 
+}
+#nav ul li a { 
+    display:block; 
+    padding:20px 5px 20px; 
+    text-decoration:none; 
+    color:#000; 
+    font-size:12px; 
+    letter-spacing:2px;
+    -webkit-transition: .2s; 
+
+}
+
+.desktop #nav ul li a:hover { 
+    color:#bf4a22; 
+}
+
+li #line {
+    padding-right:10px;
+    padding-left: 30px;
+}
+
+/* logo and arrow nav button */
+#nav ul li #line { 
+    display:none; 
+}
+
+ol {
+    list-style-type: none;
+}
+
+/*----------------------------------------------------------------------------- 
+HEADER
+-----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------- 
+HEADER HERO
+-----------------------------------------------------------------------------*/
+
+#logo {
+    background-image: url('../img/line-models-logo.png');
+    position:fixed;
+    background-repeat: no-repeat;
+    width:160px;
+    height: 200px; 
+    top:50%; 
+    left:50%;
+    margin-top: -100px;
+    margin-left: -80px;  
+    z-index:2; 
+}
+
+
+/*----------------------------------------------------------------------------- 
+MAIN
+-----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------- 
+FEATURE IMAGES
+-----------------------------------------------------------------------------*/
+.imageArea {
+    position: relative;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    display: block;
+    z-index: 1;
+}
+
+
+.feature {
+    background-image: url('../img/line-models-home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.feature1 {
+    background-image: url('../img/line-models-bookAmodel-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.feature2 {
+    background-image:url('../img/line-models-lineclients-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.feature3 {
+    background-image:url('../img/line-models-beamodel-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+/*----------------------------------------------------------------------------- 
+SECTIONS
+-----------------------------------------------------------------------------*/
+#bookings a:hover {
+    color: #bf4a22;
+
+}
+
+/*----------------------------------------------------------------------------- 
+IMAGES INDEX.HTML
+-----------------------------------------------------------------------------*/
+figure {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: block;
+}
+
+figure img, #modelTeam-grid div img { 
+    display:block; 
+    max-width:100%; 
+    padding:0; 
+    margin:0; 
+    border:none; 
+}
+/* about-grid home page*/
+
+#about-grid .two-col { 
+    padding:10px 10px 20px 10px; 
+    text-align:center; 
+}
+
+#about-grid .two-col li { 
+    max-width:400px; 
+    margin:0 auto; 
+    list-style-type: none;
+}
+
+#about-grid .two-col li figure { 
+    margin-bottom:10px; 
+    position:relative; 
+    -webkit-transform:translateZ(0); 
+}
+#about-grid .two-col li figure img { 
+    border:1px solid #ccc; 
+}
+/* models-grid home page*/
+
+#models-grid .four-col { 
+    padding:10px 10px 20px 10px; 
+    text-align:center; 
+}
+
+#models-grid .four-col li { 
+    max-width:400px; 
+    margin:0 auto; 
+    list-style-type: none;
+}
+
+#models-grid .four-col li figure { 
+    margin-bottom:10px; 
+    position:relative; 
+    -webkit-transform:translateZ(0); 
+}
+#models-grid .four-col li figure img { 
+    border:1px solid #ccc; 
+}
+/*----------------------------------------------------------------------------- 
+MODELS.HTML
+-----------------------------------------------------------------------------*/
+/* modelTeam-grid  */
+
+#modelTeam-grid .five-col { 
+    padding:10px 10px 20px 10px; 
+    text-align:center; 
+}
+
+#modelTeam-grid .five-col li { 
+    max-width:400px; 
+    margin:0 auto; 
+    list-style-type: none;
+}
+
+#modelTeam-grid .five-col li div { 
+    margin-bottom:10px; 
+    position:relative; 
+    -webkit-transform:translateZ(0); 
+}
+#modelTeam-grid .five-col li div img { 
+    border:1px solid #ccc; 
+}
+
+#modelTeam-grid .title {
+    font-size: 12px;
+    line-height:16px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+#modelTeam-grid .thumb-wrapper{
+    position: relative;
+   
+}
+
+#modelTeam-grid .measurements {
+    font-size: 10px;
+    line-height: 8px;
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: left;
+    font-family: "runda", arial, sans-serif;
+    color: #222;
+    letter-spacing: 1px;
+}
+.sixth:hover li {
+    background: blue;
+}
+
+/*SELECTED MODEL CSS STYLES */
+.selected {
+    opacity: 0.5;
+}
+
+.selectThis {
+    font-size:0.6em;
+    text-align:center; 
+    position:relative; 
+    z-index:10; 
+    -webkit-transform:translateZ(0);
+}
+
+.selectThis h4 {
+    background-color: #222;
+    margin: 0;
+    padding: 10px 0 10px 0;
+}
+
+.selectThis h4:hover {
+    background-color: #bf4a22;
+}
+.selected h4 {
+    background-color: #bf4a22;
+}
+
+/*BACK TO TOP BUTTON OVERLAY*/
+.back-top {
+    position: fixed;
+    bottom: 50px;
+    right: 0%;
+    padding: 9px 11px;
+    border-radius:50px 0 0 50px;
+    background-color: rgba(145, 145, 145, 0.75);
+}
+
+
+.back-top a em {
+    line-height: 35px;
+    margin-left: 5px;
+    font-family: "runda", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #222;
+    font-style: normal;
+}
+
+.back-top span {
+    width: 35px;
+    height: 35px;
+    display: block;
+    float: left;
+    background: url('../img/button-top.png');
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+/*----------------------------------------------------------------------------- 
+BOOK-A-MODEL-FORM.HTML
+-----------------------------------------------------------------------------*/
+
+
+.book-a-model-form {
+    background:#fff;
+    border:1px solid black;
+    width: 600px;
+    height:275px;
+	margin: 0px auto;
+	text-align:left;
+	padding:15px 0px 0px 140px;
+    margin: 0px auto; 
+}
+
+.book-form {
+    background: #000;
+    width: 150px;
+    position:relative; 
+    z-index:10;
+    display:inline-block;
+    height: 50px;
+    padding-top: 3px;
+    text-align: center;
+    margin:15px 5px 140px 5px;
+    padding: 10px;
+}
+
+.book-form a {
+    color: #fff;
+    font-family: "runda", arial, sans-serif;
+    font-size: .8em;
+    letter-spacing: 2px;
+}
+
+.book-form:hover {
+    background: #bf4a22;
+}
+
+.book-form a:hover {
+    color: #efefef;
+}
+*/
+/*----------------------------------------------------------------------------- 
+BECOMEAMODEL.HTML
+-----------------------------------------------------------------------------*/
+/*upload photo section*/
+.upload-photo {
+    float:left;
+    display:block;
+    width:340px;
+}
+
+.model-application-form {
+    display:inline-block;
+    float:left;
+    width:329px;
+} 
+
+.upload-button {
+    width:270px;
+    text-align:center;
+    margin-top:10px;
+    bottom: 30px;
+    padding: 9px 11px;
+    border-radius:50px 50px 50px 50px;
+    background-color: rgba(145, 145, 145, 0.75);
+}
+
+.upload-button a em{
+    line-height: 35px;
+    letter-spacing: 2px;
+    margin-left: 5px;
+    font-family: "runda", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    font-style: normal;
+}
+
+.upload-button span {
+    width: 35px;
+    height: 35px;
+    display: block;
+    float: left;
+    background: url('../img/button-top.png');
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+.upload-button:hover {
+    background: #222;
+    transition: 1s;
+}
+.upload-button a em:hover {
+    color: #fff;
+    text-decoration:underline;
+}
+
+/*uploaded photo thumbnails*/
+/*.thumbnails .four-col { 
+    padding:5px 5px 20px 10px; 
+    text-align:left; 
+}*/
+
+.thumbnails .four-col li { 
+    max-width:400px; 
+    margin:0 auto; 
+    list-style-type: none;
+}
+
+.thumbnails .four-col li figure { 
+    margin-bottom:10px; 
+    position:relative; 
+    -webkit-transform:translateZ(0); 
+}
+.thumbnails .four-col li figure img { 
+    border:1px solid #ccc; 
+}
+
+
+label, input, select {
+    display: inline-block;
+    float: left;
+    height: 35px;
+}
+
+input, select {
+    border: 1px solid;
+    background-color: #fff;
+    margin: 5px;
+    font-size: 16px;
+}
+
+label{
+    clear: left;
+    width: 104px;
+    text-align: left;
+    margin: 5px;
+}
+
+input {  
+    width: 200px;
+    font-family: "runda", arial, sans-serif;
+    letter-spacing: 1px;
+    padding-left: 6px;
+}
+
+select {
+    margin: 5px;
+    font-size: 16px;
+    border:medium none;
+    -webkit-appearance: menulist;
+    align-items: center;
+    border: 1px solid;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    cursor: default;   
+}
+
+
+#gender {
+    background: none repeat scroll 0 0 transparent;
+    width: 200px;
+    outline: medium none !important;
+    padding-right: 4px;
+}
+
+.size-measurement {
+    width: 275px;
+    float: right;
+    display:inline-block;
+}
+
+.size-measurement ul li {
+    list-style:none;
+}
+
+.size-measurement ul {
+    padding:0px 6px 0px 6px;
+}
+
+.apply a{
+    float:right;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+    
+/*----------------------------------------------------------------------------- 
+CONTACT SECTION
+-----------------------------------------------------------------------------*/
+
+#contact { 
+    border-top: 3px solid #fff;
+    padding-bottom:0;
+    background:#222;
+
+}
+ 
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+ }
+
+#contact ul li p {
+    color: #fff;
+}
+
+#contact li { 
+    margin-bottom:8px;
+    text-decoration: none; 
+}
+
+#contact h2 { 
+    color: white;
+}
+
+#contact .three-col { 
+    padding-top:0px;
+    margin-bottom: 0px; 
+}
+
+#contact .three-col { 
+    text-align:center; 
+}
+
+#contact .three-col ul li { 
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/*----------------------------------------------------------------------------- 
+FOOTER
+-----------------------------------------------------------------------------*/
+footer p {
+    font-family: "runda", Arial, sans-serif;
+    font-size:14px;
+}
+footer.footer{
+    background:#3e3e3e;
+    color:#fff;
+    border-top: 1px solid #fff;
+    }
+
+.footer {
+    text-align:center;
+    padding:35px 22px;
+    
+    line-height:20px;
+    line-height:1.6666666666666667rem;
+}
+
+footer a {
+    text-decoration: underline;
+    font-family: "runda", Arial, sans-serif;
+    font-size:14px;
+    color:#fff;
+}
+/*----------------------------------------------------------------------------- 
+MEDIA
+-----------------------------------------------------------------------------*/
+
+@media only screen and (min-width : 500px) {
+    /* Shared
+    ----------------------------------------------------*/
+    .section { padding:80px 0; }
+    .button .title { font-size:18px; }
+
+
+    /* Typography
+    ----------------------------------------------------*/
+    body { font-size:20px; }
+    h1 { font-size:26px; letter-spacing:2px; margin-bottom:12px; }
+    h2 { font-size:18px; margin-bottom:8px; }
+    p { font-size:14px; }
+
+
+    /* Logo 
+    -------------------------------*/
+    #logo { padding:120px 0; }
+    #logo h2 { margin-bottom:70px; font-size:38px; }
+    #logo h4 { margin-bottom:4px; font-size:20px; letter-spacing:2px; }
+        /* models-grid 
+    -------------------------------*/
+    #modelTeam-grid .five-col li { float:left; width:33.33333333%; margin:0; }
+    #modelTeam-grid .five-col li div { margin:10px 10px; }
+
+    /* Nav 
+    -------------------------------*/
+    #nav ul li a { padding:24px 5px; width:80px;}
+
+    /* line/nav button */
+    #nav ul li#line { display:inline-block; opacity:.6; }
+    #nav ul li#line a { display:block; padding:0; margin-right: 10px; margin-bottom: -11px; height:30px; width:70px; background:url('../img/line_nav.png') no-repeat;}
+    #nav.fixed ul li#line a {background: url('../img/line_nav_arrow.png') no-repeat center;}
+    #nav.fixed ul li#line a:hover {background: url('../img/line_nav_arrow_hover.png') no-repeat center;}
+
+    /* thumnails become a model page */
+
+    .thumbnails .four-col li { float:left; width:33.333%; margin:0; }
+    .thumbnails .four-col li figure { margin:10px 10px; }
+
+}
+
+
+@media only screen and (min-width : 600px) {
+
+    /* about-grid 
+    -------------------------------*/
+    #about-grid .two-col { max-width:600px; margin:0 auto; }
+    #about-grid .two-col li { float:left; width:50%; margin:0; }
+    #about-grid .two-col li figure { margin:10px 10px; }
+
+    /* models-grid 
+    -------------------------------*/
+    #models-grid .four-col { max-width:800px; margin:0 auto; text-align:center;}
+    #models-grid .four-col li { float:left; width:25%; margin:0; }
+    #models-grid .four-col li figure { margin:10px 10px; }
+
+    /* .thumnails 
+    -------------------------------*/
+    .thumbbnails .four-col { max-width:800px; margin:0 auto; text-align:center;}
+    .thumbnails .four-col li { float:left; width:15%; margin:0; }
+    .thumbnails .four-col li figure { margin:10px 10px; }
+   
+    /* modelTeam grid
+    -------------------------------*/
+    #modelTeam-grid .five-col { max-width:800px; margin:0 auto; }
+    #modelTeam-grid .five-col li { float:left; width:20%; margin:0; }
+    #modelTeam-grid .five-col li figure { margin:10px 10px; }
+                                    
+    /* Nav 
+    -------------------------------*/
+    #nav ul li a { font-size:12px; letter-spacing:2px; }
+}
+
+@media only screen and (min-width : 700px) {
+    /* Typography
+    ----------------------------------------------------*/
+    body { font-size:20px; }
+    h1 { font-size:50px; letter-spacing:2px; }
+    h2 { font-size:22px; margin-bottom:10px; }
+    p { font-size:20px; }
+    label { font-size: 20px;}
+
+    /* Nav 
+    -------------------------------*/
+    #nav ul li a { width:103px; }
+
+}
+
+@media only screen and (min-width : 900px) {
+    /* Nav 
+    -------------------------------*/
+    #nav ul li a { width:190px; }
+
+
+}
+
+@media only screen and (min-width : 1000px) {
+    /* Contact 
+    -------------------------------*/
+    #contact .three-col { padding-top:40px; }
+    #contact .three-col li { float:left; width:33.3333%; }
+    #contact .three-col li a.block { min-height:440px; padding-bottom:100px; }
+    #contact .twitter p.handle { margin-bottom:100px; }
+    #contact-models .three-col { padding-top:40px; }
+    #contact-models .three-col li { float:left; width:33.3333%; }
+    #contact-models .three-col li a.block { min-height:440px; padding-bottom:100px; }
+    #contact-models .twitter p.handle { margin-bottom:100px; }
+    .thumbnails .four-col li { float:left; width:15%; margin:0; }
+    .thumbnails .four-col li figure { margin:10px 10px; }
+}
+
+@media only screen and (min-width : 1260px) {
+    /* models-grid 
+    -------------------------------*/
+    #models-grid .four-col { max-width:1680px; }
+    .thumbbnails .four-col { max-width:1680px; margin:0 auto; text-align:center;}
+    .thumbnails .four-col li { float:left; width:15%; margin:0; }
+    .thumbnails .four-col li figure { margin:10px 10px; }
+    
+    /* modelTeam 
+    -------------------------------*/
+    #modelTeam-grid .five-col { max-width:1680px; }
+    #modelTeam-grid .five-col li { width:20%; }
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+src=
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
